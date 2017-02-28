@@ -419,7 +419,7 @@ Each layer has the option to
      <pre><span></span><span class="k">class</span> <span class="nc">LinearLayer</span><span class="p">(</span><span class="n">Layer</span><span class="p">):</span>
     <span class="sd">"""The linear layer performs a linear transformation to its input."""</span>
     
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_in</span><span class="p">,</span> <span class="n">n_out</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_in</span><span class="p">,</span> <span class="n">n_out</span><span class="p">):</span>
         <span class="sd">"""Initialize hidden layer parameters.</span>
 <span class="sd">        n_in is the number of input variables.</span>
 <span class="sd">        n_out is the number of output variables."""</span>
@@ -1567,7 +1567,7 @@ A/R/EMbHCZbvAAAAAElFTkSuQmCC
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'True label'</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">'Confusion table'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.03</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="c1"># Show a grid to seperate digits</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">b</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">u'minor'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">b</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="sa">u</span><span class="s1">'minor'</span><span class="p">)</span>
 <span class="c1"># Color each grid cell according to the number classes predicted</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">conf_matrix</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">'nearest'</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">'binary'</span><span class="p">)</span>
 <span class="c1"># Show the number of samples in each cell</span>
@@ -1875,3 +1875,4 @@ DRIWiyUp/w+jutkctmADrAAAAABJRU5ErkJggg==
   </div>
  </div>
 </div>
+

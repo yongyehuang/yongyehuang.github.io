@@ -582,7 +582,10 @@ kYpULEREpCIVCxERqUjFQkREKvr/1vHrpZbI9OAAAAAASUVORK5CYII=
      output_activations(h , wo)
     </code>
     method.
-Note that we add a bias (intercept) term of $-1$ to the input of the logistic output neuron. Remember from part 2 that the logistic output neuron without bias can only learn a decision boundary that goes through the origin $(0)$. Since the RBF in the hidden layer projects all input variables to a range between $0$ and $+ \infty$, the output layer without an intercept will not be able to learn any useful classifier, because none of the samples will be below $0$ and thus lie on the left side of the decision boundary. By adding a bias term the decision boundary is moved from the intercept. Normally the value of this bias termed is learned together with the rest of the weight parameters, but to keep this model simple we just make this bias constant in this example.
+Note that we add a bias (intercept) term of $-1$ to the input of the logistic output neuron. Remember from part 2 that the logistic output neuron without bias can only learn a decision boundary that goes through the origin $(0)$. Since the RBF in the hidden layer projects all input variables to a range between $0$ and $1$, the output layer without an intercept will not be able to learn any useful classifier, because none of the samples will be below $0$ and thus lie on the left side of the decision boundary. By adding a bias term the decision boundary is moved from the intercept. Normally the value of this bias term is learned together with the rest of the weight parameters, but to keep this model simple we just make this bias constant in this example.
+    <a href="http://stackoverflow.com/a/42436987/919431">
+     (More details on this here.)
+    </a>
    </p>
   </div>
  </div>
@@ -3489,3 +3492,4 @@ rGZmZhVyYjUzM6uQE6uZmVmFnFjNzMwq5MRqZmZWof8DbzsJmCuzmfUAAAAASUVORK5CYII=
   </div>
  </div>
 </div>
+
