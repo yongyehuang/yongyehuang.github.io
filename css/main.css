@@ -69,9 +69,9 @@ div.container {
     padding-right: 5px;
     text-align: left;
   }
-  div.container {
-    padding-left: 15px;
-    padding-right: 50px;
+  div.container {   /** 这里设置正文内容**/
+    padding-left: 115px;
+    padding-right: 150px;
     margin-left: 0px;
     margin-right: 0px;
     width: auto;
