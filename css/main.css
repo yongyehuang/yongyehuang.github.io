@@ -7,8 +7,8 @@ body {
 }
 .main-template {     /*这里设置文章内容*/
   padding-top: 60px;
-  padding-left: 125px;
-  padding-right: 125px;
+  padding-left: 25px;
+  padding-right: 25px;
   text-align: left;
 }
 
@@ -69,11 +69,11 @@ div.container {
     padding-right: 5px;
     text-align: left;
   }
-  div.container {   /** 这里设置正文内容**/
-    padding-left: 115px;
-    padding-right: 150px;
-    margin-left: 0px;
-    margin-right: 0px;
+  div.container {
+    padding-left: 15px;
+    padding-right: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
     width: auto;
   }
 }
