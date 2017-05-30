@@ -3,11 +3,7 @@ body {
   padding-top: 0px;
   padding-right: 0px;
   padding-bottom: 0px;
-  padding-left: 0px;
-  
-  line-height: 1.5;
-  font-size: 18px;
-   
+  padding-left: 0px;   
 }
 .main-template {
   padding-top: 60px;
@@ -52,11 +48,11 @@ div.container {
 @media (min-width: 768px) {
   /* Navbar positioning foo */
   .navbar-wrapper {
-    margin-top: 20px;
+    margin-top: 0px;
   }
   .navbar-wrapper .container {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 55px;
+    padding-left: 85px;
   }
   .navbar-wrapper .navbar {
     padding-right: 0;
