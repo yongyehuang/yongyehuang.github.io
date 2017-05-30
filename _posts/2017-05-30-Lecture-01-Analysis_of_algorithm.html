@@ -1,9 +1,6 @@
---- 
-layout: notebook_simple_ann_post 
-title: MIT Lecture-01 Analysis of algorithm
----
-
-
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
 <title>Lecture-01-Analysis of algorithm</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
@@ -11870,7 +11867,7 @@ $$ T(n) = \sum_{j=2}^{n} \Theta(j/2) = \Theta(n^2) $$<p>插入排序需要的辅
 <li><strong>合并</strong>：将子问题的解组合成原问题的解。</li>
 </ul>
 <p>归并排序包括下面三个步骤。</p>
-<center><img src="https://raw.githubusercontent.com/yongyehuang/CLRS/master/fig/lecture1/1.jpg" width="25%"/>图1</center><p><font color="red" style="font-weight:bold">关于求解递归式有三种方法：</font></p>
+<center><img src="https://raw.githubusercontent.com/yongyehuang/yongyehuang.github.io/master/notebooks/CLRS/fig/lecture1/1.jpg" width="25%"/>图1</center><p><font color="red" style="font-weight:bold">关于求解递归式有三种方法：</font></p>
 <ul>
 <li><strong>代入法</strong>：我们猜测一个界，然后用数学归纳法证明这个界是正确的。</li>
 <li><strong>递归树法</strong>：将递归问题转换为一棵树，其结点表示不同层次的递归调用产生的代价。然后采用变价和技术来求解递归式。</li>
@@ -11888,11 +11885,11 @@ T(n)=
 \right.  
 \end{equation}<p></p>
 <p>现在引入递归树来求解 $T(n)=2T(n/2) + cn, 其中\ c > 0 为常数。$把上面的式子转换成一棵树。按照下面图 2~6 来推算。</p>
-<center><img src="https://raw.githubusercontent.com/yongyehuang/CLRS/master/fig/lecture1/2.jpg" width="35%"/>图2</center>
-<center><img src="https://raw.githubusercontent.com/yongyehuang/CLRS/master/fig/lecture1/3.jpg" width="35%"/>图3</center>
-<center><img src="https://raw.githubusercontent.com/yongyehuang/CLRS/master/fig/lecture1/4.jpg" width="35%"/>图4</center>
-<center><img src="https://raw.githubusercontent.com/yongyehuang/CLRS/master/fig/lecture1/5.jpg" width="35%"/>图5</center>
-<center><img src="https://raw.githubusercontent.com/yongyehuang/CLRS/master/fig/lecture1/6.jpg" width="35%"/>图6</center><p>所以归并排序的<strong>渐进时间复杂度</strong>为 $\Theta(nlgn)$，这比插入排序的 $\Theta(n^2)$ 增长要慢得多。实际上，当$n>30$的时候，归并排序优于插入排序。</p>
+<center><img src="https://raw.githubusercontent.com/yongyehuang/yongyehuang.github.io/master/notebooks/CLRS/fig/lecture1/2.jpg" width="35%"/>图2</center>
+<center><img src="https://raw.githubusercontent.com/yongyehuang/yongyehuang.github.io/master/notebooks/CLRS/fig/lecture1/3.jpg" width="35%"/>图3</center>
+<center><img src="https://raw.githubusercontent.com/yongyehuang/yongyehuang.github.io/master/notebooks/CLRS/fig/lecture1/4.jpg" width="35%"/>图4</center>
+<center><img src="https://raw.githubusercontent.com/yongyehuang/yongyehuang.github.io/master/notebooks/CLRS/fig/lecture1/5.jpg" width="35%"/>图5</center>
+<center><img src="https://raw.githubusercontent.com/yongyehuang/yongyehuang.github.io/master/notebooks/CLRS/fig/lecture1/6.jpg" width="35%"/>图6</center><p>所以归并排序的<strong>渐进时间复杂度</strong>为 $\Theta(nlgn)$，这比插入排序的 $\Theta(n^2)$ 增长要慢得多。实际上，当$n>30$的时候，归并排序优于插入排序。</p>
 <p>下面是用 python 写的归并排序的代码。参考：<a href="http://www.cnblogs.com/piperck/p/6030122.html">归并排序详解(python实现)</a></p>
 <p>一共就两个函数。 "merge(a,b)" 函数将两个序列进行合并。"merge_sort(_list)" 函数，对序列 _list 从下（最小规模）往上进行合并排序。</p>
 
@@ -12081,3 +12078,4 @@ Size: 10000, Merge_sort costs 0.038626 seconds.
     </div>
   </div>
 </body>
+</html>
