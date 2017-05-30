@@ -1,3 +1,5 @@
+# This Repository was forked from https://github.com/peterroelants/peterroelants.github.io
+
 # Use Github pages Jekyll configuration
 # Launch Github pages Jekyll with:
 # bundle exec jekyll serve
@@ -5,17 +7,17 @@
 # General blog information
 ############################################################
 # Name of your blog (this will show up at the top of your page and in the RSS feed)
-name: Peter's Notes
+name: Yongye's Notes
 # Short description (goes below the title; it will also be used in the RSS feed)
 description: Aggregation of notes and code samples.
 # Your name, as you want it to appear underneath each post and in the footer
-author: Peter
+author: Yongye
 # Your email if you want it to be linked on the contact page
-author_email: peter.roelants@gmail.com
+author_email: yonogye@bupt.edu.cn
 # The URL of your actual domain. This will be used to make absolute links in the RSS feed.
-url: http://peterroelants.github.io
-twitter_username: PeterRoelants
-github_username:  peterroelants
+url: https://yongyehuang.github.io/
+#twitter_username: PeterRoelants
+github_username:  yongyehuang
 
 # Where things are
 ############################################################
