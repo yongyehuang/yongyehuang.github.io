@@ -5,10 +5,10 @@ body {
   padding-bottom: 0px;
   padding-left: 0px;   
 }
-.main-template {
+.main-template {     /*这里设置文章内容*/
   padding-top: 60px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
   text-align: left;
 }
 
@@ -51,8 +51,8 @@ div.container {
     margin-top: 0px;
   }
   .navbar-wrapper .container {
-    padding-right: 55px;
-    padding-left: 85px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
   .navbar-wrapper .navbar {
     padding-right: 0;
@@ -81,8 +81,8 @@ div.container {
 
 
 /*Fix Bootstrap and jumping to Anchors*/
-h1, h2, h3, h4, h5, h6  {
-  margin-top:10px;
+h1, h2, h3, h4, h5, h6  {   /*设置标题的段前距离*/
+  margin-top:15px;
 }
 
 /* center images */
