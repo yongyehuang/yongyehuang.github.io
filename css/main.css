@@ -7,8 +7,8 @@ body {
 }
 .main-template {     /*这里设置文章内容*/
   padding-top: 60px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 125px;
+  padding-right: 125px;
   text-align: left;
 }
 
