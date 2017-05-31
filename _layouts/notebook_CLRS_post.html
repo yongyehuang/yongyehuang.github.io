@@ -11,14 +11,12 @@
 		</div>
 			<div class="inner_cell">
 			<div class="text_cell_render border-box-sizing rendered_html">
-			<h1>{{page.title}}</h1>
+			<h1 class="post-title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
 			<p>MIT-算法导论学习笔记</p>
-			<ul>
-				<li><a href="{% post_url 2017-05-30-Lecture-01-Analysis_of_algorithm %}">01.课程简介及算法分析</a></li>
-			</ul>
 			</div>
 		   </div>
 	</div>
+   <p class="post-date">{{ page.date|date:"%Y-%m-%d" }}</p>   
     {{ content }}
   </div>
 
