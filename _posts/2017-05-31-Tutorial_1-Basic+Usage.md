@@ -1,6 +1,8 @@
 --- 
 layout: notebook_CLRS_post
 title: TensorFlow入门（一）基本用法
+column: CLRS
+description: 介绍 TensorFlow 的基本使用方法。
 ---
 
 <br/>refer to: http://wiki.jikexueyuan.com/project/tensorflow-zh/get_started/basic_usage.html

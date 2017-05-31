@@ -4,25 +4,26 @@ body {
   padding-right: 0px;
   padding-bottom: 0px;
   padding-left: 0px;
-  font-size: 16px;
-  line-height: 1.5;  
+  font-size: 15px;
+  line-height: 1.8;  
 }
 
 .post-wrapper {       /*博客主题部分*/
-  width: 900px;
+  width: 1000px;
   margin: 0 auto;
   background: #fff;
   padding: 80px 60px;
 }
 
-.post-title .post-date {   /*设置标题*/
+.post-title {   /*设置标题*/
   text-align: center;
 }
 
 .post-date {       /*设置日期*/
+  text-align: center;
   color: #999;
-  margin-bottom: 60px;
-  font-size: 14px;
+  margin-bottom: 5px;
+  font-size: 15px;
 }
 
 .main-template {     /*这里设置文章内容*/
@@ -40,7 +41,34 @@ div.container {
   width: auto;
 }
 
-/* CUSTOMIZE THE NAVBAR  
+/*专栏页面设置*/
+/* --------------------------------------------------*/
+.column-title {
+  margin-bottom: 60px;
+}
+
+.home h1 { margin-bottom: 25px; }
+
+.posts { list-style-type: none; }
+
+.posts li { margin-bottom: 30px; }
+
+.posts .post-date {
+  text-align: left;
+  display: block;
+  font-size: 15px;
+  color: #818181;
+}
+
+.posts .post-link {
+  font-size: 20px;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+
+
+/* CUSTOMIZE THE NAVBAR  配置导航栏
 -------------------------------------------------- */
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
@@ -70,7 +98,7 @@ div.container {
 @media (min-width: 768px) {   /*对于分辨率大于 768 的采用下面的配置  */
   /* Navbar positioning foo */
   .navbar-wrapper {
-    margin-top: 0px;
+    margin-top: 10px;
   }
   .navbar-wrapper .container {
     padding-right: 0px;
@@ -103,7 +131,10 @@ div.container {
 
 
 /*Fix Bootstrap and jumping to Anchors*/
-h1, h2, h3, h4, h5, h6  {   /*设置标题的段前距离*/
+h2, h3  {   /*设置标题的段前距离*/
+  margin-top:28px;
+}
+h1, h4, h5, h6  {   /*设置标题的段前距离*/
   margin-top:18px;
 }
 
@@ -201,4 +232,28 @@ div.collapsed {
 .post_preview .col-lg-4 p {
   margin-right: 10px;
   margin-left: 10px;
+}
+
+
+
+.h1,h1 {
+	font-size:36px
+}
+.h2,h2 {
+	font-size:30px
+}
+.h3,h3 {
+	font-size:24px
+}
+.h4,h4 {
+	font-size:18px
+}
+.h5,h5 {
+	font-size:14px
+}
+.h6,h6 {
+	font-size:12px
+}
+p {
+	margin:20px 0 20px
 }
