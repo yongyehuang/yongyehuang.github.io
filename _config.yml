@@ -4,21 +4,6 @@
 # Launch Github pages Jekyll with:
 # bundle exec jekyll serve
 
-# General blog information
-############################################################
-# Name of your blog (this will show up at the top of your page and in the RSS feed)
-name: Yongye's blog
-# Short description (goes below the title; it will also be used in the RSS feed)
-description: Aggregation of notes and code samples.
-# Your name, as you want it to appear underneath each post and in the footer
-author: Yongye
-# Your email if you want it to be linked on the contact page
-author_email: yonogye@bupt.edu.cn
-# The URL of your actual domain. This will be used to make absolute links in the RSS feed.
-url: https://yongyehuang.github.io/
-#twitter_username: PeterRoelants
-github_username:  yongyehuang
-
 # Where things are
 ############################################################
 source: . # Set by Github
@@ -107,3 +92,11 @@ kramdown:
     coderay_tab_width:         4
     coderay_bold_every:        10
     coderay_css:               style
+    
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor   # Fix Invalid date '0000-00-00': Post '/vendor/ ... 
+
+
+

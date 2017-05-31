@@ -1,0 +1,38 @@
+current directory: /home1/huangyongye/mygithub/yongyehuang.github.io/vendor/bundle/ruby/2.3.0/gems/redcarpet-3.1.2/ext/redcarpet
+/usr/bin/ruby2.3 -r ./siteconf20170531-21064-42rim.rb extconf.rb
+creating Makefile
+
+current directory: /home1/huangyongye/mygithub/yongyehuang.github.io/vendor/bundle/ruby/2.3.0/gems/redcarpet-3.1.2/ext/redcarpet
+make "DESTDIR=" clean
+
+current directory: /home1/huangyongye/mygithub/yongyehuang.github.io/vendor/bundle/ruby/2.3.0/gems/redcarpet-3.1.2/ext/redcarpet
+make "DESTDIR="
+compiling autolink.c
+compiling buffer.c
+compiling houdini_href_e.c
+compiling houdini_html_e.c
+compiling html.c
+html.c: In function ‘rndr_header’:
+html.c:290:57: warning: passing argument 1 of ‘header_anchor’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   bufprintf(ob, "<h%d id=\"%s\">", level, header_anchor(text));
+                                                         ^
+html.c:268:7: note: expected ‘struct buf *’ but argument is of type ‘const struct buf *’
+ char *header_anchor(struct buf *text)
+       ^
+html.c: In function ‘toc_header’:
+html.c:638:51: warning: passing argument 1 of ‘header_anchor’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   bufprintf(ob, "<a href=\"#%s\">", header_anchor(text));
+                                                   ^
+html.c:268:7: note: expected ‘struct buf *’ but argument is of type ‘const struct buf *’
+ char *header_anchor(struct buf *text)
+       ^
+compiling html_smartypants.c
+compiling markdown.c
+compiling rc_markdown.c
+compiling rc_render.c
+compiling stack.c
+linking shared-object redcarpet.so
+
+current directory: /home1/huangyongye/mygithub/yongyehuang.github.io/vendor/bundle/ruby/2.3.0/gems/redcarpet-3.1.2/ext/redcarpet
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 redcarpet.so ./.gem.20170531-21064-1f8dkhk
