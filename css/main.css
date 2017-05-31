@@ -7,8 +7,8 @@ body {
 }
 .main-template {     /*这里设置文章内容*/
   padding-top: 60px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 5px;
+  padding-right: 5px;
   text-align: left;
 }
 
@@ -51,8 +51,8 @@ div.container {
     margin-top: 0px;
   }
   .navbar-wrapper .container {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 0px;
+    padding-left: 0px;
   }
   .navbar-wrapper .navbar {
     padding-right: 0;
@@ -70,10 +70,10 @@ div.container {
     text-align: left;
   }
   div.container {
-    padding-left: 15px;
-    padding-right: 50px;
-    margin-left: 150px;
-    margin-right: 150px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 100px;
+    margin-right: 100px;
     width: auto;
   }
 }
