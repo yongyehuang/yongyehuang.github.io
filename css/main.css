@@ -8,6 +8,13 @@ body {
   line-height: 1.5;  
 }
 
+.post-wrapper {
+  width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 80px 60px;
+}
+
 
 .post-title .post-date {   /*设置标题*/
   text-align: center;
