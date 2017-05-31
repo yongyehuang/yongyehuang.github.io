@@ -5,26 +5,25 @@ column: MIT-算法导论笔记
 description: 1.介绍了算法性能分析的基本方法：渐进分析方法。 2.使用递归树的方法来求解递归问题的渐进复杂度。 3.介绍直接插入排序和归并排序两个例子。重点掌握归并排序算法的代码实现和时间复杂度分析。
 ---
 
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.-&#24615;&#33021;&#65288;performance&#65289;&#26159;&#31639;&#27861;&#20998;&#26512;&#26368;&#37325;&#35201;&#30340;&#20869;&#23481;">1. &#24615;&#33021;&#65288;performance&#65289;&#26159;&#31639;&#27861;&#20998;&#26512;&#26368;&#37325;&#35201;&#30340;&#20869;&#23481;<a class="anchor-link" href="#1.-&#24615;&#33021;&#65288;performance&#65289;&#26159;&#31639;&#27861;&#20998;&#26512;&#26368;&#37325;&#35201;&#30340;&#20869;&#23481;">&#182;</a></h3>
-
+<p>摘要： 1.介绍了算法性能分析的基本方法：渐进分析方法。 2.使用递归树的方法来求解递归问题的渐进复杂度。 3.介绍直接插入排序和归并排序两个例子。重点掌握归并排序算法的代码实现和时间复杂度分析。</p>
+<h3 id="1.-&#24615;&#33021;&#65288;performance&#65289;&#26159;&#31639;&#27861;&#20998;&#26512;&#26368;&#37325;&#35201;&#30340;&#20869;&#23481;">1. &#24615;&#33021;&#65288;performance&#65289;&#26159;&#31639;&#27861;&#20998;&#26512;&#26368;&#37325;&#35201;&#30340;&#20869;&#23481;<a class="anchor-link" href="#1.-&#24615;&#33021;&#65288;performance&#65289;&#26159;&#31639;&#27861;&#20998;&#26512;&#26368;&#37325;&#35201;&#30340;&#20869;&#23481;">&#182;</a></h3><p>在算法导论这门课中，最最重点的就是要学会分析算法。而算法的性能（performance）或者叫运行效率，是算法分析的主要内容。对于一个软件来说，有很多方面都是需要程序员考虑的，比如正确性、可维护性、可扩展性、健壮性、安全性、用户交互性等等。对于一个软件是否成功，这些因素都是必须考虑的。但是为什么我们在这里要这么重点地去分析算法的效率呢？因为上面提到的很多方面其实都离不开运行效率，就笑课上老师打的一个比方：认为钱重要还是水和饭重要？当然是水和饭，钱是不能保证人的生存的，但是钱却可以换来水和饭。而算法分析中的“效率”就相当于“钱”，你可以用“效率”来换取其他东西，比如安全性，稳定性等等。它只是一个交换物，但我们，却离不开它。<a href="http://blog.csdn.net/xyd0512/article/details/8210259">[1]</a></p>
 <h3 id="2.-&#34913;&#37327;&#36816;&#34892;&#25928;&#29575;&#30340;&#22240;&#32032;">2. &#34913;&#37327;&#36816;&#34892;&#25928;&#29575;&#30340;&#22240;&#32032;<a class="anchor-link" href="#2.-&#34913;&#37327;&#36816;&#34892;&#25928;&#29575;&#30340;&#22240;&#32032;">&#182;</a></h3><ul>
 <li><strong>数据的输入情况。</strong>比如对于插入排序来说，一个已经排序好的序列更加容易排序。</li>
 <li><strong>数据的数量。</strong>比如短序列比长序列更好排序。</li>
 <li><strong>找到运行时间的上界。</strong>一般情况下，我们需要找到程序运行时间的上界来得到保证绝对不需要更长时间。</li>
 </ul>
-
 <h3 id="3.-&#20960;&#31181;&#20998;&#26512;&#36816;&#34892;&#26102;&#38388;&#30340;&#26041;&#27861;">3. &#20960;&#31181;&#20998;&#26512;&#36816;&#34892;&#26102;&#38388;&#30340;&#26041;&#27861;<a class="anchor-link" href="#3.-&#20960;&#31181;&#20998;&#26512;&#36816;&#34892;&#26102;&#38388;&#30340;&#26041;&#27861;">&#182;</a></h3><ul>
 <li><strong>最坏情况分析。</strong> 用T(n)来表示算法在输入规模为n时的最大运行时间。它的作用就是你可以用它来给别人做出承诺，即我的算法在最坏的情况下的运行时间也不会超过T(n)。</li>
 <li><strong>平均情况分析。</strong> 用T(n)来表示算法在输入规模为n时的期望运行时间。假设所有的输入符合均匀分布，计算所有输入所消耗的平均时间。</li>
 <li><strong>最优情况分析。</strong> 如果你想骗人，用一组极好的数据在一个效率极低的算法上跑，我们称之为算法的运行时间的最好情况，这是不够说服人的。</li>
 </ul>
 <p>一般情况下都是进行最坏情况分析，而最优情况分析实际上没有任何意义。</p>
-
 <h3 id="4.-&#28176;&#36827;&#20998;&#26512;">4. &#28176;&#36827;&#20998;&#26512;<a class="anchor-link" href="#4.-&#28176;&#36827;&#20998;&#26512;">&#182;</a></h3><p>我们通常所说的运行时间，都会存在一个相对时间与绝对时间的区别。比如在一台巨型机和在一台微机上运行同一个程序，所用的时间显示是不同的。这是我们就需要引入一个更加宏观的概念：渐近分析</p>
 <ul>
 <li>对于一个算法的运行时间，忽略那些依赖于机器的常量；</li>
@@ -32,18 +31,9 @@ description: 1.介绍了算法性能分析的基本方法：渐进分析方法�
 <li>关注于运行时间的增长，而不仅仅只是运行时间。不去考虑每个基本运算所消耗的时间。</li>
 </ul>
 <h4 id="4.1-&#28176;&#36827;&#26631;&#27880;-$\Theta$-&#26631;&#27880;">4.1 &#28176;&#36827;&#26631;&#27880; $\Theta$ &#26631;&#27880;<a class="anchor-link" href="#4.1-&#28176;&#36827;&#26631;&#27880;-$\Theta$-&#26631;&#27880;">&#182;</a></h4><p>引入一个助记符号 $\Theta(n)$.</p>
-<p>举一个例子：如果一个算法的运行时间为：$3n^3 + 2n^2 + 4n + 1$，那么忽略掉依赖机器的常量1，以及所有的低阶项2n^2、4n，那么这个算法的时间复杂度就为$\Theta(n^3)$。</p>
+<p>举一个例子：如果一个算法的运行时间为：$3n^3 + 2n^2 + 4n + 1$，那么忽略掉依赖机器的常量1，以及所有的低阶项 $2n^2$、$4n$，那么这个算法的时间复杂度就为$\Theta(n^3)$。</p>
 <p>在这里，老师也进行了很形象的说明。如果算法A的渐近时间复杂度是$\Theta(n^3)$，算法B的是$\Theta(n^2)$，那么一定存在一个足够大的n，使得当数据规模大于n时，算法B的运行时间要小于A，不管算法A一开始的优势有多么大，不管算法B的渐近复杂度的系数和常数有多么大，都没有用。<strong>用这样一个助记符就可以将时间复杂度的分析独立于机器，独立于具体的常数，对我们分析算法将会十分有利。</strong></p>
-<h3 id="5.-&#20004;&#20010;&#20363;&#23376;&#65306;&#25554;&#20837;&#25490;&#24207;&#12289;&#24402;&#24182;&#25490;&#24207;">5. &#20004;&#20010;&#20363;&#23376;&#65306;&#25554;&#20837;&#25490;&#24207;&#12289;&#24402;&#24182;&#25490;&#24207;<a class="anchor-link" href="#5.-&#20004;&#20010;&#20363;&#23376;&#65306;&#25554;&#20837;&#25490;&#24207;&#12289;&#24402;&#24182;&#25490;&#24207;">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="5.1-&#25554;&#20837;&#25490;&#24207;">5.1 &#25554;&#20837;&#25490;&#24207;<a class="anchor-link" href="#5.1-&#25554;&#20837;&#25490;&#24207;">&#182;</a></h4>
+<h3 id="5.-&#20004;&#20010;&#20363;&#23376;&#65306;&#25554;&#20837;&#25490;&#24207;&#12289;&#24402;&#24182;&#25490;&#24207;">5. &#20004;&#20010;&#20363;&#23376;&#65306;&#25554;&#20837;&#25490;&#24207;&#12289;&#24402;&#24182;&#25490;&#24207;<a class="anchor-link" href="#5.-&#20004;&#20010;&#20363;&#23376;&#65306;&#25554;&#20837;&#25490;&#24207;&#12289;&#24402;&#24182;&#25490;&#24207;">&#182;</a></h3><h4 id="5.1-&#25554;&#20837;&#25490;&#24207;">5.1 &#25554;&#20837;&#25490;&#24207;<a class="anchor-link" href="#5.1-&#25554;&#20837;&#25490;&#24207;">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -104,30 +94,21 @@ $$ T(n) = \sum_{j=2}^{n} \Theta(j) = \Theta(n^2) $$<ul>
 <li>平均情况。</li>
 </ul>
 $$ T(n) = \sum_{j=2}^{n} \Theta(j/2) = \Theta(n^2) $$<p>插入排序需要的辅助空间为 $O(1)$, 是一种稳定的排序算法。</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="5.2-&#24402;&#24182;&#25490;&#24207;">5.2 &#24402;&#24182;&#25490;&#24207;<a class="anchor-link" href="#5.2-&#24402;&#24182;&#25490;&#24207;">&#182;</a></h4><p>归并排序是一种分治问题，通过递归的方式来解决问题。在每一层的递归中，应用下面三个步骤：</p>
+<h4 id="5.2-&#24402;&#24182;&#25490;&#24207;">5.2 &#24402;&#24182;&#25490;&#24207;<a class="anchor-link" href="#5.2-&#24402;&#24182;&#25490;&#24207;">&#182;</a></h4><p>归并排序是一种分治问题，通过递归的方式来解决问题。在每一层的递归中，应用下面三个步骤：<br/></p>
 <ul>
 <li><strong>分解</strong>：划分子问题，子问题和原问题一样，只是规模更小了。</li>
 <li><strong>解决</strong>：按照递归求解子问题。如果规模足够小了，则停止递归，直接求解。</li>
 <li><strong>合并</strong>：将子问题的解组合成原问题的解。</li>
 </ul>
 <p>归并排序包括下面三个步骤。</p>
-<center><img src="https://raw.githubusercontent.com/yongyehuang/yongyehuang.github.io/master/notebooks/CLRS/fig/lecture1/1.jpg" width="25%"/>图1</center><p><font color="red" style="font-weight:bold">关于求解递归式有三种方法：</font></p>
+<center><img src="https://raw.githubusercontent.com/yongyehuang/yongyehuang.github.io/master/notebooks/CLRS/fig/lecture1/1.jpg" width="45%"/>图1</center><p><font color="red" style="font-weight:bold">关于求解递归式有三种方法：</font><br/></p>
 <ul>
 <li><strong>代入法</strong>：我们猜测一个界，然后用数学归纳法证明这个界是正确的。</li>
 <li><strong>递归树法</strong>：将递归问题转换为一棵树，其结点表示不同层次的递归调用产生的代价。然后采用变价和技术来求解递归式。</li>
 <li><strong>主方法</strong>：可求解下面公式的递归式的界: $T(n)=aT(n/b)+f(n)$ , 其中 $a\geq1, b>1, f(n)$是一个给定函数。</li>
 </ul>
 <p>在这节课上，主要介绍了使用递归树的方法来求解归并排序。</p>
-<p>从上面归并排序的三个步骤分析，有</p>
+<p>从上面归并排序的三个步骤分析，则有：</p>
 \begin{equation}  
 T(n)=
 \left\{  
@@ -138,12 +119,12 @@ T(n)=
 \right.  
 \end{equation}<p></p>
 <p>现在引入递归树来求解 $T(n)=2T(n/2) + cn, 其中\ c > 0 为常数。$把上面的式子转换成一棵树。按照下面图 2~6 来推算。</p>
-<center><img src="https://raw.githubusercontent.com/yongyehuang/yongyehuang.github.io/master/notebooks/CLRS/fig/lecture1/2.jpg" width="35%"/>图2</center>
-<center><img src="https://raw.githubusercontent.com/yongyehuang/yongyehuang.github.io/master/notebooks/CLRS/fig/lecture1/3.jpg" width="35%"/>图3</center>
-<center><img src="https://raw.githubusercontent.com/yongyehuang/yongyehuang.github.io/master/notebooks/CLRS/fig/lecture1/4.jpg" width="35%"/>图4</center>
-<center><img src="https://raw.githubusercontent.com/yongyehuang/yongyehuang.github.io/master/notebooks/CLRS/fig/lecture1/5.jpg" width="35%"/>图5</center>
-<center><img src="https://raw.githubusercontent.com/yongyehuang/yongyehuang.github.io/master/notebooks/CLRS/fig/lecture1/6.jpg" width="35%"/>图6</center><p>所以归并排序的<strong>渐进时间复杂度</strong>为 $\Theta(nlgn)$，这比插入排序的 $\Theta(n^2)$ 增长要慢得多。实际上，当$n>30$的时候，归并排序优于插入排序。</p>
-<p>下面是用 python 写的归并排序的代码。参考：<a href="http://www.cnblogs.com/piperck/p/6030122.html">归并排序详解(python实现)</a></p>
+<center><img src="https://raw.githubusercontent.com/yongyehuang/yongyehuang.github.io/master/notebooks/CLRS/fig/lecture1/2.jpg" width="45%"/>图2</center>
+<center><img src="https://raw.githubusercontent.com/yongyehuang/yongyehuang.github.io/master/notebooks/CLRS/fig/lecture1/3.jpg" width="45%"/>图3</center>
+<center><img src="https://raw.githubusercontent.com/yongyehuang/yongyehuang.github.io/master/notebooks/CLRS/fig/lecture1/4.jpg" width="45%"/>图4</center>
+<center><img src="https://raw.githubusercontent.com/yongyehuang/yongyehuang.github.io/master/notebooks/CLRS/fig/lecture1/5.jpg" width="45%"/>图5</center>
+<center><img src="https://raw.githubusercontent.com/yongyehuang/yongyehuang.github.io/master/notebooks/CLRS/fig/lecture1/6.jpg" width="45%"/>图6</center><p>所以归并排序的<strong>渐进时间复杂度</strong>为 $\Theta(nlgn)$，这比插入排序的 $\Theta(n^2)$ 增长要慢得多。实际上，当$n>30$的时候，归并排序优于插入排序。</p>
+<p>下面是用 python 写的归并排序的代码。<a href="http://www.cnblogs.com/piperck/p/6030122.html">[2] 归并排序详解(python实现)</a></p>
 <p>一共就两个函数。 "merge(a,b)" 函数将两个序列进行合并。"merge_sort(_list)" 函数，对序列 _list 从下（最小规模）往上进行合并排序。</p>
 
 </div>
@@ -309,26 +290,16 @@ Size: 10000, Merge_sort costs 0.038626 seconds.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>从上面的结果来看，归并排序的运行时间要远远小于直接插入排序。</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>总结</strong></p>
+<p><strong>总结</strong><br/></p>
 <ul>
 <li>掌握渐进分析方法。</li>
 <li>掌握如何使用 递归树 的方法来求解递归问题的渐进时间复杂度。</li>
 <li>熟练编写归并排序的代码。</li>
 </ul>
-<p><strong>参考</strong></p>
-<p><a href="http://blog.csdn.net/xyd0512/article/details/8210259">MIT算法导论——第一讲.Analysis of algorithm</a> <br/>
-<a href="http://www.cnblogs.com/piperck/p/6030122.html">归并排序详解(python实现)</a></p>
+<p><strong>参考</strong> <br/>
+<a href="http://blog.csdn.net/xyd0512/article/details/8210259">[1] MIT算法导论——第一讲.Analysis of algorithm</a> <br/>
+<a href="http://www.cnblogs.com/piperck/p/6030122.html">[2] 归并排序详解(python实现)</a></p>
 
 </div>
 </div>
 </div>
-
