@@ -84,7 +84,7 @@ div.container {
 
 /*Fix Bootstrap and jumping to Anchors*/
 h1, h2, h3, h4, h5, h6  {   /*设置标题的段前距离*/
-  margin-top:15px;
+  margin-top:18px;
 }
 
 /* center images */
