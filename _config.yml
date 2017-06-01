@@ -64,6 +64,7 @@ baseurl: "" # does not include hostname
 permalink: /posts/:title/
 paginate_path: /page:num
 # Set the time zone for site generation.
+future: true
 timezone: Beijing
 
 quiet: false
