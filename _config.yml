@@ -56,6 +56,11 @@ gems: [github-pages]
 ############################################################
 markdown: kramdown
 highlighter: rouge # Set by Github
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+
 # LSI: produce an index for related posts.
 lsi: false # Set by Github
 excerpt_separator: "\n\n"

@@ -9,10 +9,10 @@ body {
 }
 
 .post-wrapper {       /*博客主题部分*/
-  width: 1000px;
+  max-width: 1000px;
   margin: 0 auto;
   background: #fff;
-  padding: 80px 60px;
+  padding: 80px 15px;
 }
 
 .post-title {   /*设置标题*/
@@ -67,7 +67,6 @@ div.container {
 }
 
 
-
 /* CUSTOMIZE THE NAVBAR  配置导航栏
 -------------------------------------------------- */
 
@@ -96,6 +95,7 @@ div.container {
 }
 
 @media (min-width: 768px) {   /*对于分辨率大于 768 的采用下面的配置  */
+    
   /* Navbar positioning foo */
   .navbar-wrapper {
     margin-top: 10px;
