@@ -61,6 +61,8 @@ kramdown:
   auto_ids: true
   syntax_highlighter: rouge
 
+  
+
 # LSI: produce an index for related posts.
 lsi: false # Set by Github
 excerpt_separator: "\n\n"
