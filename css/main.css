@@ -256,7 +256,7 @@ p {
 
 /*设置代码块的样式*/
 .highlighter-rouge .highlight  {
-    background-color: #eef;   
+    background-color: #f5f5f5;   
 }
 
 .language-python .highlighter-rouge .highlight  {
