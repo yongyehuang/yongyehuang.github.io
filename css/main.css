@@ -4,7 +4,7 @@ body {
   line-height: 1.8;  
 }
 
-.post {       /*博客主题部分*/
+.post-wrapper {       /*博客主题部分*/
   max-width: 900px;
   margin: 0 auto;
   background: #fff;
@@ -255,8 +255,8 @@ p {
 }
 
 /*设置代码格式*/
-.post pre,
-.post code {
+.post-wrapper pre,
+.post-wrapper code {
   border: 1px solid #d5d5e9;
   background-color: #eef;
   padding: 8px 12px;
