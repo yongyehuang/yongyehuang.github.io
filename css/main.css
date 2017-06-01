@@ -254,15 +254,14 @@ p {
 	margin:20px 0 20px
 }
 
-/*设置代码格式*/
-.post-wrapper pre,
-.post-wrapper code {
-  border: 1px solid #d5d5e9;
-  background-color: #eef;
-  padding: 8px 12px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  font-size: 15px;
-  overflow:auto;
+/*设置代码块的样式*/
+.highlighter-rouge .highlight  {
+    background-color: #eef;   
 }
+
+.language-python .highlighter-rouge .highlight  {
+    background-color: #eef;
+    border: 1px solid #d5d5e9;    
+}
+
+
