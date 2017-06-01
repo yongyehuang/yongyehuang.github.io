@@ -256,10 +256,10 @@ p {
 
 /*设置代码块的样式*/
 .highlighter-rouge .highlight  {
-    background-color: #f5f5f5;   
+    background-color: #fff;   
 }
 
-.language-python .highlighter-rouge .highlight  {
+.language-python  .highlight  {
     background-color: #eef;
     border: 1px solid #d5d5e9;    
 }
