@@ -5,6 +5,21 @@ column: TensorFlow
 description: "介绍 TensorFlow 的基本使用方法。"
 ---
 
+$y = x^2 + 3x$
+
+$$a^2 + b_2 = c_2^4$$
+
+<p>从上面归并排序的三个步骤分析，则有：</p>
+\begin{equation}  
+T(n)=
+\left\{  
+     \begin{array}{lr} 
+     \Theta(1), &if\ n = 1; \\
+     2T(n/2) + \Theta(n), &if\ n> 1.     
+     \end{array}  
+\right.  
+\end{equation}<p></p>
+
 本例子主要是按照 tensorflow的中文文档来学习 tensorflow 的基本用法。按照文档说明，主要存在的一些问题：
 - 1.就是 Session() 和 InteractiveSession() 的用法。后者用 Tensor.eval() 和 Operation.run() 来替代了 Session.run(). 其中更多的是用 Tensor.eval()，所有的表达式都可以看作是 Tensor. 
 - 2.另外，tf的表达式中所有的变量或者是常量都应该是 tf 的类型。
