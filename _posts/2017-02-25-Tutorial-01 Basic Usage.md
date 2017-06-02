@@ -1,15 +1,11 @@
 --- 
-layout: notebook_CLRS_post
+layout: column_post
 title: TensorFlow入门（一）基本用法
-column: CLRS
-description: 介绍 TensorFlow 的基本使用方法。
+column: TensorFlow
+description: "介绍 TensorFlow 的基本使用方法。"
 ---
 
-<br/>refer to: http://wiki.jikexueyuan.com/project/tensorflow-zh/get_started/basic_usage.html
-<br/>@author: huangyongye
-<br/>@date: 2017-02-25
-<br/><br/>本例子主要是按照 tensorflow的中文文档来学习 tensorflow 的基本用法。按照文档说明，主要存在的一些问题：
-<br/>
+本例子主要是按照 tensorflow的中文文档来学习 tensorflow 的基本用法。按照文档说明，主要存在的一些问题：
 - 1.就是 Session() 和 InteractiveSession() 的用法。后者用 Tensor.eval() 和 Operation.run() 来替代了 Session.run(). 其中更多的是用 Tensor.eval()，所有的表达式都可以看作是 Tensor. 
 - 2.另外，tf的表达式中所有的变量或者是常量都应该是 tf 的类型。
 - 3.只要是声明了变量，就得用 sess.run(tf.global_variables_initializer()) 或者 x.initializer.run() 方法来初始化才能用。
@@ -440,8 +436,3 @@ print 's_1=', s_1
     s_0= [230 269]
     s_1= [ 99 219 181]
 
-
-
-```python
-
-```
