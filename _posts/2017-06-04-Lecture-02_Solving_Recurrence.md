@@ -134,3 +134,7 @@ Case3. 若对于某个常数 $\varepsilon > 0$ 有$f(n)=\Omega(n^{log_ba+\vareps
 
 附：等比数列求和公式
 <img src="/images/CLRS/lecture2/7.jpg"  width="60%">
+
+
+**参考**
+[\[1\]MIT算法导论——第二讲.Solving Recurrence](http://blog.csdn.net/xyd0512/article/details/8211482)
