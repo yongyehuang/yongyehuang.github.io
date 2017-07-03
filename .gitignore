@@ -2,3 +2,5 @@ _site
 .sass-cache/
 *.ipynb_checkpoints*
 *.pyc
+/notebook/python_abc/data/*
+
